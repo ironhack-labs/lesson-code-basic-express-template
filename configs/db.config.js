@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/change-database-name';
+
 mongoose
-  .connect('mongodb://localhost/change-database-name', {
+  .connect(MONGO_URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
