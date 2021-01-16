@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost/change-database-name';
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-movies-celebrities";
 
 mongoose
   .connect(MONGO_URI, {
@@ -8,5 +8,5 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  .then(x => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
-  .catch(err => console.error('Error connecting to mongo', err));
+  .then((x) => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
+  .catch((err) => console.error("Error connecting to mongo", err));
